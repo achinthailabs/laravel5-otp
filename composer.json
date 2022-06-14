@@ -1,0 +1,41 @@
+{
+    "name": "achinthailabs/laravel5-otp",
+    "type": "library",
+    "description": "Laravel OTP generator and validation",
+    "keywords": [
+        "achinthailabs",
+        "laravel5-otp"
+    ],
+    "homepage": "https://github.com/achinthailabs/laravel5-otp",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Achintha Rodrigo",
+            "email": "achintha@incubatelabs.com",
+            "homepage": "https://github.com/achinthailabs",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "^5.5.9|^7.0|^8.0",
+        "illuminate/support": "^5.2|^6.0|^7.0|^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "achinthailabs\\laravel5-otp\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "achinthailabs\\Otp\\OtpServiceProvider"
+            ],
+            "aliases": {
+                "Otp": "achinthailabs\\Otp\\OtpFacade"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
