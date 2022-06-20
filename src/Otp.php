@@ -48,7 +48,7 @@ class Otp
         return $this;
     }
 
-    public function generate(string $identifier = null, array $options = []): string
+    public function generate(string $identifier = null, array $options = [])
     {
         if(!empty($options)) foreach(['format','customize','length','separator','sensitive','expires','repeated','prefix','data'] as $value){
             if(isset($options[$value])) $this->{$value} = $options[$value];
@@ -66,7 +66,7 @@ class Otp
         return $password;
     }
 
-    public function validate(string $identifier = null, string $password = null, array $options = []): object
+    public function validate(string $identifier = null, string $password = null, array $options = [])
     {
         if(!empty($options)) foreach(['attempts','sensitive','disposable','skip'] as $value){
             if(isset($options[$value])) $this->{$value} = $options[$value];
@@ -153,7 +153,7 @@ class Otp
         return true;
     }
 
-    private function generateNewPassword(): string
+    private function generateNewPassword()
     {
         try{
             $formats = [
